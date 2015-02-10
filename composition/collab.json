@@ -1,0 +1,10 @@
+{
+    "roles": {
+        "*": true
+    },
+    "name": "collab",
+    "module": {
+        "main": "api/collab.js",
+        "clientDependencies": ["/public/js/collab.js"]
+    }
+}

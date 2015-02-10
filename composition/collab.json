@@ -6,5 +6,11 @@
     "module": {
         "main": "/api/collab.js",
         "clientDependencies": ["/js/collab.js"]
-    }
+    },
+    "flow": [{
+        "in": "clientConnected",
+        "out": [{
+            "call": "clientConnectedServer"
+        }]
+    }]
 }

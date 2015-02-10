@@ -5,7 +5,7 @@
     "name": "root",
     "module": "github.com|adioo|view|v0.0.1",
     "client": {
-        "load": ["collab"]
+        "load": ["collab"],
         "config": {
             "title": "Collab",
             "templates": {

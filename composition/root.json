@@ -1,0 +1,37 @@
+{
+    "roles": {
+        "*": true
+    },
+    "name": "root",
+    "module": "github.com|adioo|view|v0.0.1",
+    "client": {
+        "config": {
+            "title": "Hello World",
+            "templates": {
+                "layout": {
+                    "to": "body",
+                    "html": "/root.html",
+                    "render": true,
+                    "pages": true
+                }
+            }
+        },
+        "css": [
+            "https://cdn.rawgit.com/IonicaBizau/CaiuSS/master/dist/caiuss.min.css",
+            "/style.css"
+        ],
+        "html": [
+            "/root.html"
+        ],
+        "flow": [
+            {
+                "in": "^ready$",
+                "out": [
+                    {
+                        "call": "factory"
+                    }
+                ]
+            }
+        ]
+    }
+}

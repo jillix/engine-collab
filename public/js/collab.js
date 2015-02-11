@@ -2,7 +2,11 @@ var $ = function (s) {
     return document.querySelector(s);
 };
 
-var content = $("#content");
+exports.init = function () {
+    this.textarea = $("#content")
+};
+
 exports.updateTextarea = function (ev, data) {
-    content.value = data.value;
+    if (!data.value) { return; }
+    this.textarea.value = data.value;
 };

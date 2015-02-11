@@ -3,5 +3,18 @@
         "*": true
     },
     "name": "collab",
-    "module": "github.com|jillix|web-sockets|v0.0.1"
+    "module": "github.com|jillix|web-sockets|v0.0.1",
+    "client": {
+        "load": ["collab_custom"],
+        "flow": [{
+            "in": "data",
+            "out": {
+                "call": "updateTextarea",
+                "to": "collab_custom"
+            }
+        }]
+    },
+    "config": {
+        "type": "all"
+    }
 }

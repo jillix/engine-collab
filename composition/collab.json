@@ -3,14 +3,5 @@
         "*": true
     },
     "name": "collab",
-    "module": {
-        "main": "/api/collab.js",
-        "clientDependencies": ["/js/collab.js"]
-    },
-    "flow": [{
-        "in": "clientConnected",
-        "out": [{
-            "call": "clientConnectedServer"
-        }]
-    }]
+    "module": "github.com|jillix|web-sockets|v0.0.1"
 }

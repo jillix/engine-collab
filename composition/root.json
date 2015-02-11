@@ -13,7 +13,22 @@
                     "to": "body",
                     "html": "/root.html",
                     "render": true,
-                    "pages": true
+                    "pages": true,
+                    "flow": [
+                        {
+                            "in": "input",
+                            "selector": "#content",
+                            "out": [
+                                {
+                                    "call": "wsEmit",
+                                    "set": {
+                                        "value": "$#content:value"
+                                    },
+                                    "to": "collab"
+                                }
+                            ]
+                        }
+                    ]
                 }
             }
         },
@@ -23,16 +38,6 @@
         ],
         "html": [
             "/root.html"
-        ],
-        "flow": [
-            {
-                "in": "^ready$",
-                "out": [
-                    {
-                        "call": "factory"
-                    }
-                ]
-            }
         ]
     }
 }

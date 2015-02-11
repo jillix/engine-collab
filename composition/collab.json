@@ -8,10 +8,10 @@
         "load": ["collab_custom"],
         "flow": [{
             "in": "data",
-            "out": {
+            "out": [{
                 "call": "updateTextarea",
                 "to": "collab_custom"
-            }
+            }]
         }]
     },
     "config": {

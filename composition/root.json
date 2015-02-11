@@ -8,30 +8,28 @@
         "load": ["collab"],
         "config": {
             "title": "Collab",
-            "templates": {
-                "layout": {
-                    "to": "body",
-                    "html": "/root.html",
-                    "render": true,
-                    "pages": true,
-                    "flow": [
-                        {
-                            "in": "input",
-                            "selector": "#content",
-                            "out": [
-                                {
-                                    "call": "wsEmit",
-                                    "set": {
-                                        "value": "$#content:value"
-                                    },
-                                    "to": "collab"
-                                }
-                            ]
-                        }
-                    ]
-                }
+            "template": {
+                "to": "body",
+                "html": "/root.html",
+                "render": true,
+                "pages": true
             }
         },
+        "extFlow": [
+            {
+                "in": "input",
+                "selector": "#content",
+                "out": [
+                    {
+                        "call": "wsEmit",
+                        "set": {
+                            "value": "$#content:value"
+                        },
+                        "to": "collab"
+                    }
+                ]
+            }
+        ],
         "css": [
             "https://cdn.rawgit.com/IonicaBizau/CaiuSS/master/dist/caiuss.min.css",
             "/style.css"

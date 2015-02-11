@@ -4,6 +4,6 @@
     },
     "name": "collab_custom",
     "module": {
-        "clientDependencies": "/js/collab.js"
+        "clientDependencies": ["/js/collab.js"]
     }
 }
